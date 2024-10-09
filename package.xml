@@ -1,10 +1,9 @@
-<package>
+<?xml version="1.0"?>
+<package format="3">
   <name>ackermann_msgs</name>
   <version>1.0.2</version>
-  <description>
-    ROS messages for robots using Ackermann steering.
-  </description>
-  <maintainer email="jack.oquin@gmail.com">Jack O'Quin</maintainer>
+  <description>ROS messages for robots using Ackermann steering.</description>
+  <maintainer email="thanos.panagiotidis@protonmail.com">Thanos Panagiotidis</maintainer>
   <author>Jack O'Quin</author>
   <license>BSD</license>
 
@@ -12,15 +11,16 @@
   <url type="repository">https://github.com/ros-drivers/ackermann_msgs.git</url>
   <url type="bugtracker">https://github.com/ros-drivers/ackermann_msgs/issues</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rosidl_default_generators</depend>
+  <depend>std_msgs</depend>
+  <depend>builtin_interfaces</depend>
 
-  <build_depend>message_generation</build_depend>
-  <build_depend>std_msgs</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
 
-  <run_depend>message_runtime</run_depend>
-  <run_depend>std_msgs</run_depend>
-  
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
   <export>
-    <architecture_independent/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
